@@ -1,14 +1,8 @@
 import React from 'react'
-import {Navbar, Container, Nav} from 'react-bootstrap'
-import {NavCollapse, NavLink, NavToggle} from './Header.styles'
+import styled from 'styled-components'
+import {Navbar as NavbarBS, Container, Nav, NavLink} from 'react-bootstrap'
 
-interface MenuItem {
-  id: number
-  href: string
-  text: string
-}
-
-const menuItems: Array<MenuItem> = [
+const menuItems = [
   {
     id: 1,
     href: '#',
@@ -36,12 +30,21 @@ const menuItems: Array<MenuItem> = [
   },
 ]
 
+const Navbar = styled(NavbarBS)`
+  grid-column: 1 / -1;
+  grid-row: 1 / 1;
+
+  border-bottom: 1px solid #ffffff36;
+  padding-left: var(--footer-width);
+  background-color: var(--c-primary);
+`
+
 const Header: React.FC = () => (
-  <Navbar as="header" expand="lg" sticky="top" bg="dark" variant="dark">
-    <Container fluid="xxl" as="nav" className="justify-content-between">
+  <Navbar forwardedAs="header" expand="lg" sticky="top" variant="dark">
+    <Container fluid="xxl" as="nav" className="justify-content-between ps-0">
       <Navbar.Brand href="#shingles-aware">Logo</Navbar.Brand>
-      <NavToggle aria-controls="main-nav" />
-      <NavCollapse id="main-nav">
+      <Navbar.Toggle id="main-nav" />
+      <Navbar.Collapse aria-controls="main-nav">
         <Nav className="justify-content-end w-100">
           {menuItems.map(({id, href, text}) => (
             <NavLink key={id} href={href}>
@@ -49,7 +52,7 @@ const Header: React.FC = () => (
             </NavLink>
           ))}
         </Nav>
-      </NavCollapse>
+      </Navbar.Collapse>
     </Container>
   </Navbar>
 )

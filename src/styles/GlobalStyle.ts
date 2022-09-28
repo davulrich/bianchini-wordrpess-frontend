@@ -6,9 +6,9 @@ const styled = {createGlobalStyle}
 const GlobalStyle = styled.createGlobalStyle`
   :root {
     // Colors
-    --c-primary: #5e3687;
-    --c-secondary: #40b5a6;
+    --c-primary: #292929;
     --c-gray: #f0f0f0;
+    --c-black: #000;
     --c-white: #ffffff;
 
     // Fonts
@@ -37,7 +37,8 @@ const GlobalStyle = styled.createGlobalStyle`
     // BS Variables
     --bs-primary-rgb: 94, 53, 135;
     --bs-secondary-rgb: 64, 181, 166;
-    --bs-dark-rgb: var(--bs-primary-rgb);
+    --bs-body-bg: #000;
+    --bs-body-color: #fff;
 
     ${mediaUp(breakpoints.md)} {
       --fs-plus-6: 2.725rem;
