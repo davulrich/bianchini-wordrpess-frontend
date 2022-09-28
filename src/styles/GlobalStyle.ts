@@ -12,8 +12,8 @@ const GlobalStyle = styled.createGlobalStyle`
     --c-white: #ffffff;
 
     // Fonts
-    --ff-base: 'ProximaNova', serif;
-    --ff-secondary: 'ArgentCF', sans-serif;
+    --ff-base: 'Questrial', serif;
+    --ff-secondary: 'Montserrat', sans-serif;
 
     --fs-plus-6: 2.5rem;
     --fs-plus-5: 1.625rem;
