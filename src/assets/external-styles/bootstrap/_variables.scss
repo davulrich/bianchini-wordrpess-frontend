@@ -21,7 +21,9 @@ $font-sizes: (
 ////////////////////
 // Navbar
 //
-$navbar-dark-color: rgba($white, 0.9);
-$navbar-dark-hover-color: $white;
-$navbar-dark-active-color: $white;
+$navbar-nav-link-padding-x: 1rem;
+
+$navbar-dark-color: $white;
+$navbar-dark-hover-color: #999;
+$navbar-dark-active-color: #999;
 $navbar-dark-disabled-color: rgba($white, 0.25);

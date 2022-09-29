@@ -1,32 +1,37 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Navbar as NavbarBS, Container, Nav, NavLink} from 'react-bootstrap'
+import {
+  Navbar as NavbarBS,
+  Container,
+  Nav,
+  NavLink as NavLinkBS,
+} from 'react-bootstrap'
 import Logo from './logo.svg'
 
 const menuItems = [
   {
     id: 1,
-    href: '#',
+    href: '#1',
     text: 'Item1',
   },
   {
     id: 2,
-    href: '#',
+    href: '#2',
     text: 'Item2',
   },
   {
     id: 3,
-    href: '#',
+    href: '#3',
     text: 'Item3',
   },
   {
     id: 4,
-    href: '#',
+    href: '#4',
     text: 'Item3',
   },
   {
     id: 5,
-    href: '#',
+    href: '#5',
     text: 'Item4',
   },
 ]
@@ -38,6 +43,26 @@ const Navbar = styled(NavbarBS)`
   border-bottom: 1px solid #ffffff36;
   padding-left: var(--footer-width);
   background-color: var(--c-primary);
+`
+
+const NavLink = styled(NavLinkBS)`
+  font-size: 0.7rem;
+  font-family: var(--ff-secondary);
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+  position: relative;
+
+  &.active::before {
+    content: '';
+    position: absolute;
+    top: -1.3rem;
+    width: 100%;
+    height: 5px;
+    background: #ffffff36;
+    left: 0;
+  }
 `
 
 const Header: React.FC = () => (
