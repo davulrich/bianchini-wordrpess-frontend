@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Navbar as NavbarBS, Container, Nav, NavLink} from 'react-bootstrap'
+import Logo from './logo.svg'
 
 const menuItems = [
   {
@@ -41,8 +42,10 @@ const Navbar = styled(NavbarBS)`
 
 const Header: React.FC = () => (
   <Navbar forwardedAs="header" expand="lg" sticky="top" variant="dark">
-    <Container fluid="xxl" as="nav" className="justify-content-between ps-0">
-      <Navbar.Brand href="#shingles-aware">Logo</Navbar.Brand>
+    <Container fluid as="nav" className="justify-content-between ps-0">
+      <Navbar.Brand href="/" className="p-0">
+        <Logo alt="Bianchini logo" width={130} />
+      </Navbar.Brand>
       <Navbar.Toggle id="main-nav" />
       <Navbar.Collapse aria-controls="main-nav">
         <Nav className="justify-content-end w-100">
