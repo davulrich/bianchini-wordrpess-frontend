@@ -7,6 +7,7 @@ import {
   NavLink as NavLinkBS,
 } from 'react-bootstrap'
 import Logo from './logo.svg'
+import {Link} from 'gatsby'
 
 const menuItems = [
   {
@@ -68,7 +69,7 @@ const NavLink = styled(NavLinkBS)`
 const Header: React.FC = () => (
   <Navbar forwardedAs="header" expand="lg" sticky="top" variant="dark">
     <Container fluid as="nav" className="justify-content-between ps-0">
-      <Navbar.Brand href="/" className="p-0">
+      <Navbar.Brand as={Link} to="/" className="p-0">
         <Logo alt="Bianchini logo" width={130} />
       </Navbar.Brand>
       <Navbar.Toggle id="main-nav" />
