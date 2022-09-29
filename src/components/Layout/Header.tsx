@@ -76,7 +76,13 @@ const Header: React.FC = () => (
       <Navbar.Collapse aria-controls="main-nav">
         <Nav className="justify-content-end w-100">
           {menuItems.map(({id, href, text}) => (
-            <NavLink key={id} href={href}>
+            <NavLink
+              key={id}
+              as={Link}
+              to={href}
+              className="nav-link"
+              activeClassName="active"
+            >
               {text}
             </NavLink>
           ))}
