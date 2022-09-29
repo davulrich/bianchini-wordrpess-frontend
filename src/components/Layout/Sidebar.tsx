@@ -44,6 +44,15 @@ const SocialIcons = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+
+  & svg {
+    fill: var(--c-white);
+    transition: fill 0.15s ease-in-out;
+  }
+
+  & a:hover svg {
+    fill: #999;
+  }
 `
 
 const Sidebar: React.FC = () => (
