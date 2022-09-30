@@ -42,7 +42,7 @@ const Navbar = styled(NavbarBS)`
   grid-row: 1 / 1;
 
   border-bottom: 1px solid #ffffff36;
-  padding-left: var(--footer-width);
+  padding-left: var(--sidebar-width);
   background-color: var(--c-primary);
 `
 

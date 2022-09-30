@@ -8,10 +8,10 @@ import Sidebar from './Sidebar'
 
 const StyledLayout = styled.div`
   --header-height: 4.375rem;
-  --footer-width: 5rem;
+  --sidebar-width: 5rem;
 
   display: grid;
-  grid-template-columns: var(--footer-width) 1fr;
+  grid-template-columns: var(--sidebar-width) 1fr;
   grid-template-rows: var(--header-height) 1fr;
 `
 
