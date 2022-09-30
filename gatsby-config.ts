@@ -1,6 +1,9 @@
-require('dotenv').config()
+import type {GatsbyConfig} from 'gatsby'
+import * as dotenv from 'dotenv'
 
-module.exports = {
+dotenv.config()
+
+const config: GatsbyConfig = {
   siteMetadata: {
     title: '',
     description: '',
@@ -86,3 +89,5 @@ module.exports = {
     },
   ],
 }
+
+export default config

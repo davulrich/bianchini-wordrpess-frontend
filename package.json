@@ -1,8 +1,6 @@
 {
-  "name": "gatsby-starter",
+  "name": "bianchini-wordrpess-frontend",
   "version": "0.0.1",
-  "main": "index.ts",
-  "repository": "",
   "author": "Ulrich, David <david.ulrich4@gmail.com>",
   "private": true,
   "scripts": {
