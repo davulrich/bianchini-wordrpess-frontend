@@ -55,7 +55,7 @@ const SocialIcons = styled.div`
   }
 `
 
-const Sidebar: React.FC = () => (
+const Sidebar = (): JSX.Element => (
   <StyledSidebar>
     <Title>
       <span>{'<< Page Tittle >>'}</span>

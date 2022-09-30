@@ -66,7 +66,7 @@ const NavLink = styled(NavLinkBS)`
   }
 `
 
-const Header: React.FC = () => (
+const Header = (): JSX.Element => (
   <Navbar forwardedAs="header" expand="lg" sticky="top" variant="dark">
     <Container fluid as="nav" className="justify-content-between ps-0">
       <Navbar.Brand as={Link} to="/" className="p-0">

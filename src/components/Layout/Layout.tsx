@@ -14,8 +14,10 @@ const StyledLayout = styled.div`
   grid-template-columns: var(--sidebar-width) 1fr;
   grid-template-rows: var(--header-height) 1fr;
 `
-
-const Layout: React.FC<ReactNode> = ({children}) => (
+interface Props {
+  children: ReactNode
+}
+const Layout = ({children}: Props): JSX.Element => (
   <>
     <SEO />
     <Typography />
