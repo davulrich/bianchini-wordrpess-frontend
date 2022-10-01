@@ -1,5 +1,6 @@
 import type {GatsbyConfig} from 'gatsby'
 import * as dotenv from 'dotenv'
+import {languages, defaultLanguage} from './languages'
 
 dotenv.config()
 
@@ -67,7 +68,40 @@ const config: GatsbyConfig = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/assets`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `locale`,
+        path: `${__dirname}/src/assets/locales`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        languages,
+        defaultLanguage,
+        // if you are using Helmet, you must include siteUrl, and make sure you add http:https
+        siteUrl: process.env.SITE_URL,
+        // if you are using trailingSlash gatsby config include it here, as well (the default is 'always')
+        trailingSlash: 'always',
+        // you can pass any i18next options
+        i18nextOptions: {
+          fallbackLng: defaultLanguage,
+          supportedLngs: languages,
+          defaultNS: 'common',
+          interpolation: {
+            escapeValue: false, // not needed for react as it escapes by default
+          },
+        },
+        pages: [
+          {
+            matchPath: '/:lang?/:uid',
+            getLanguageFromPath: true,
+          },
+        ],
       },
     },
     {
