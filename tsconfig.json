@@ -1,4 +1,15 @@
 {
+  "ts-node": {
+    // these options are overrides used only by ts-node
+    "compilerOptions": {
+      "skipLibCheck": true,
+      "target": "es6",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "allowJs": true,
+      "resolveJsonModule": true
+    }
+  },
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
